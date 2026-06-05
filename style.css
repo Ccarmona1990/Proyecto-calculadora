@@ -1,0 +1,94 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculadora {
+  width: 380px;
+  background: #000;
+  border-radius: 52px;
+  padding: 28px 20px 32px;
+  box-shadow: 0 0 0 1px #222, 0 32px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.06); /* subtle top inner shine  */
+}
+
+.visualizacion {
+  padding: 0 8px 18px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.expresion {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.35);
+  min-height: 22px;
+}
+
+.resultado {
+  color: #fff;
+  font-size: 72px;
+  font-weight: 200;
+  line-height: 1;
+  word-break: break-all;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  color: #fff;
+  position: relative;
+  ovevrflow: hidden;
+}
+
+.btn::after {
+  content: ""; /* required for pseudo-elements to appear */
+  position: absolute;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 — fills parent */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0); /* fully transparent */
+  transition: background 0.08s;
+}
+
+.btn:active::after {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+.btn.util {
+  background: #636366;
+  font-size: 22px;
+}
+
+.btn.op {
+  background: #FF9F0A;
+}
+
+.btn.num {
+  background: #1c1c1e;
+}/*# sourceMappingURL=style.css.map */

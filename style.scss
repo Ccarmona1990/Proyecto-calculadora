@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+$primary-color: #000;
+$secondary-color: #fff;
+$op-color: #FF9F0A;
+$util-color: #636366;
+$num-color: #1c1c1e;
+
+body {
+    background: $primary-color;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculadora {
+    width: 380px;
+    background: $primary-color;
+    border-radius: 52px;
+    padding: 28px 20px 32px;
+    box-shadow: 
+    0 0 0 1px #222,                        /* Delineado fino en el border   */
+    0 32px 80px rgba(0,0,0,0.9),           /* Sombra profunda        */
+    inset 0 1px 0 rgba(255,255,255,0.06);  /* Sutil brillo interno  */
+}
+
+.visualizacion{
+    padding: 0 8px 18px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.expresion {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.35);
+    min-height: 22px;
+}
+
+.resultado {
+    color: $secondary-color;
+    font-size: 72px;
+    font-weight: 200;
+    line-height: 1;
+    word-break: break-all;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: $secondary-color;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+  content: '';           /* necesario para que aparezcan los pseudoelementos */
+  position: absolute;
+  inset: 0;              /* Abreviatura de arriba/derecha/abajo/izquierda: 0 — ocupa todo el espacio del elemento principal */
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);  /* Completamente transparente */
+  transition: background 0.08s;
+}
+
+.btn:active::after { background: rgba(255, 255, 255, 0.18); } 
+.btn:active { transform: scale(0.94); }  
+
+.btn.util{
+    background: $util-color;
+    font-size: 22px;
+}
+.btn.op {
+    background: $op-color;
+}
+.btn.num {
+    background: $num-color;
+}

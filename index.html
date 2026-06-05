@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+  <!-- Makes the page look correct on mobile screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Iphone</title>
+</head>
+<body>
+    <main class="calculadora">
+        <!-- AREA DE VIsUALIZACION
+      Muestra 2 cosas:
+        1. .expresion → El historial de las operaciones, e.g. "12 + 5 ="
+        2. .resultado → El resultado principal mostrado al usuario -->
+         <section class="visualizacion">
+            <div class="expresion" id="expresion"></div>
+            <div class="resultado" id="resultado">0</div>
+         </section>
+         <section class="botones">
+            <!-- Primera fila -->    
+            <button class="btn util borrar" data-accion="borrar">⌫</button>
+            <button class="btn util" data-accion="limpiar">AC</button>
+            <button class="btn util" data-accion="porcentaje">%</button>
+            <button class="btn util" data-accion="operacion" data-valor="÷">÷</button>
+            <!-- Segunda fila -->
+             <button class="btn num" data-accion="digito" data-valor="7">7</button>
+             <button class="btn num" data-accion="digito" data-valor="8">8</button>
+             <button class="btn num" data-accion="digito" data-valor="9">9</button>
+             <button class="btn op" data-accion="operacion" data-valor="×">×</button>
+            <!-- Tercera fila -->
+             <button class="btn num" data-accion="digito" data-valor="4">4</button>
+             <button class="btn num" data-accion="digito" data-valor="5">5</button>
+             <button class="btn num" data-accion="digito" data-valor="6">6</button>
+             <button class="btn op" data-accion="operacion" data-valor="−">−</button>
+            <!-- Cuarta fila -->
+             <button class="btn num" data-accion="digito" data-valor="1">1</button>
+             <button class="btn num" data-accion="digito" data-valor="2">2</button>
+             <button class="btn num" data-accion="digito" data-valor="3">3</button>
+             <button class="btn op" data-accion="operacion" data-valor="+">+</button>
+            <!-- Quinta fila -->
+             <button class="btn num" data-accion="negativo">+/−</button>
+             <button class="btn num" data-accion="digito" data-valor="0">0</button>
+             <button class="btn num" data-accion="decimal">.</button>
+             <button class="btn op" data-accion="igual">=</button>
+         </section>
+    </main>
+    <footer>
+        <script type="module" src="script.js"></script>
+    </footer>
+</body>
+</html>
