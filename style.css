@@ -19,7 +19,7 @@ body {
   background: #000;
   border-radius: 52px;
   padding: 28px 20px 32px;
-  box-shadow: 0 0 0 1px #222, 0 32px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.06); /* subtle top inner shine  */
+  box-shadow: 0 0 0 1px #222, 0 32px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.06); /* Sutil brillo interno  */
 }
 
 .visualizacion {
@@ -60,15 +60,15 @@ body {
   font-size: 28px;
   color: #fff;
   position: relative;
-  ovevrflow: hidden;
+  overflow: hidden;
 }
 
 .btn::after {
-  content: ""; /* required for pseudo-elements to appear */
+  content: ""; /* necesario para que aparezcan los pseudoelementos */
   position: absolute;
-  inset: 0; /* shorthand for top/right/bottom/left: 0 — fills parent */
+  inset: 0; /* Abreviatura de arriba/derecha/abajo/izquierda: 0 — ocupa todo el espacio del elemento principal */
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0); /* fully transparent */
+  background: rgba(255, 255, 255, 0); /* Completamente transparente */
   transition: background 0.08s;
 }
 
